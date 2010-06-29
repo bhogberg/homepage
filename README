@@ -1,1 +1,3 @@
 This is a simple, django-powered website that I use to administer my lab homepage.
+
+Dependencies: Photologue (http://code.google.com/p/django-photologue/)
