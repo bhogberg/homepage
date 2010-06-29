@@ -30,7 +30,7 @@ class entry(models.Model):
         return textile(self.second_column_text)
     def thirdText(self):
         return textile(self.third_column_text)
-    def fourhText(self):
+    def fourthText(self):
         return textile(self.fourth_column_text)  
     def render(self):
         return render_to_string('pages/entry/{0}.html'.format(self.entryType), {'entry': self})     
