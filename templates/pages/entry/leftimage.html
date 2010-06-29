@@ -1,10 +1,10 @@
 <div class="content-leftimage">
-  	<div class="standard-image-box">
-  	    {% for photo in entry.first_column_images  %}
-    	<img src="{{ photo.get_standard_url }}">
+    <div class="standard-image-box">
+        {% for photo in entry.first_column_images.all  %}
+        <img src="{{ photo.get_standard_url }}">
         {% endfor %}
     </div>
-	<div class="content-text">
-		
+    <div class="content-text">
+        {{ entry.firstText }}
     </div>
 </div>

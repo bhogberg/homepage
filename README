@@ -1,3 +1,9 @@
 This is a simple, django-powered website that I use to administer my lab homepage.
 
-Dependencies: Photologue (http://code.google.com/p/django-photologue/)
+Dependencies: 
+    Photologue (http://code.google.com/p/django-photologue)
+    PyTextile (http://pypi.python.org/pypi/textile)
+    
+To use images, add these sizes to Photologue's image sizes: 
+'standard'  340px wide
+'small'     100px wide

@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^admin/(.*)', admin.site.root),
     (r'^photologue/', include('photologue.urls')),
-    (r'^pages/$', 'views.entries_index'),
+    (r'^entries/$', 'views.entries_index'),
     
     # Need to delete when going to production:
     (r'^media/(?P<path>.*)$', 'django.views.static.serve',

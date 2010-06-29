@@ -1,5 +1,6 @@
 from django.db import models
 from django.template.loader import render_to_string
+from django.contrib.markup.templatetags.markup import textile
 from photologue.models import Photo, PhotoSize
 
 class entry(models.Model):
@@ -23,8 +24,16 @@ class entry(models.Model):
     class Meta: 
         verbose_name =  'Entry' 
         verbose_name_plural = 'Entries'
+    def firstText(self):
+        return textile(self.first_column_text)
+    def secondText(self):
+        return textile(self.second_column_text)
+    def thirdText(self):
+        return textile(self.third_column_text)
+    def fourhText(self):
+        return textile(self.fourth_column_text)  
     def render(self):
-        return render_to_string('pages/entry/%s.html' %s self.entryType, {'entry': self,})     
+        return render_to_string('pages/entry/{0}.html'.format(self.entryType), {'entry': self})     
 
 
 
