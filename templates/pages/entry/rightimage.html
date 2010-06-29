@@ -6,6 +6,9 @@
         {% for photo in entry.first_column_images.all  %}
         <img src="{{ photo.get_standard_url }}">
         {% endfor %}
+        {% for photo in entry.second_column_images.all  %}
+        <img src="{{ photo.get_standard_url }}">
+        {% endfor %}
     </div>
     <div class="clear">&nbsp;</div>
 </div>

@@ -7,8 +7,9 @@ class entry(models.Model):
     TYPE_CHOICES = (
         ('leftimage','Standard, image(s) to the left'),
         ('rightimage', 'Standard, image(s) to the right'),
-        ('fourcolumn', 'Four colmuns of text'),
-        ('twocolSmallImgs', 'Two columns of text with small images')
+        ('fourcolumn', 'Four colmuns of text only'),
+        ('twocolSmallImgs', 'Two columns of text with small images'),
+        ('TxtImgTxtImg', 'Four columns A: text, images, text and then images.')
     )
     entryType = models.CharField(max_length=25,choices=TYPE_CHOICES)
     title = models.CharField(max_length=250)

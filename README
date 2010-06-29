@@ -6,4 +6,5 @@ Dependencies:
     
 To use images, add these sizes to Photologue's image sizes: 
 'standard'  340px wide
+'medium'    220px wide
 'small'     100px wide
