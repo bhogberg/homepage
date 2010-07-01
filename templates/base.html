@@ -1,29 +1,67 @@
 {% load feincms_tags %}
 {% load feincms_page_tags %}
-<html>
-<head>
-    <title>{{ feincms_page.title }}</title>
-</head>
-<body>
-	<h2>Toplevel navigation</h2>
-	<ul>
-    {% feincms_navigation of feincms_page as toplevel level=1 %}
-    {% for p in toplevel %}
-        <li><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></li>
-    <!-- Example of an if statement:   {% if not forloop.last %}|{% endif %} -->
-    {% endfor %}
-    </ul>
-
-    <h1>{{ feincms_page.title }}</h1>
-<div id="content">
-    {% block content %}
-    {% for content in feincms_page.content.main %}
-    	New content <br>
-        {{ content.render }}
-    {% endfor %}
-    {% endblock %}
-</div>
-</div>
-</body>
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{{ feincms_page.title }}</title>
+        <link href="/media/master_style_sheet.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="container container_16">
+        <!-- Start of HEADER region with title and navigation -->
+        <div id="header">
+            <div class="grid_4">
+                <h1>The big ol' title of the SITE</h1>
+            </div>
+            <div class="grid_8">
+                <h2>{{ feincms_page.title }}</h2>
+            </div>
+            <div class='grid_2'><img src="logo1.gif" width="98" height="40" /></div>
+            <div class="grid_2"><img src="logo2.gif" width="99" height="39" /></div>
+            <div class="clear">&nbsp;</div>
+            <ul>
+                {% feincms_navigation of feincms_page as toplevel level=1 %}
+                {% for p in toplevel %}
+                <li><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></li>
+                {% endfor %}
+                {% comment %} <!-- 
+                The following is to get the number of <li> items to always be 8, which is needed for my stylesheet.
+                -->
+                {% endcomment %}
+                {% if toplevel|length < 8 %}
+                    <li></li>
+                    {% if toplevel|length < 7 %}
+                        <li></li>
+                        {% if toplevel|length < 6 %}
+                            <li></li>
+                            {% if toplevel|length < 5 %}
+                                <li></li>
+                                {% if toplevel|length < 4 %}
+                                    <li></li>
+                                    {% if toplevel|length < 3 %}
+                                        <li></li>
+                                        {% if toplevel|length < 2 %}
+                                            <li></li>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            </ul>
+        </div>
+        <!-- End of HEADER region with title and navigation -->
+        <div class="clear">&nbsp;</div>
+            <div id="content">
+                {% block content %}
+                {% for content in feincms_page.content.main %}
+                {{ content.render }}
+                {% endfor %}
+                {% endblock %}
+            </div><!-- This is where the content region ends -->
+        <div class="clear">&nbsp;</div> 
+        </div><!-- This is where the container ends -->
+    </body>
+</html>
