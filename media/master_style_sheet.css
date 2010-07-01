@@ -643,7 +643,9 @@ body {
 }
 
 .content-video480left .video480 object{
-	margin-left: 100px;
+	padding: 0;
+	margin: 0;
+	float: right;
 	}
 
 .content-video480left .content-text {
