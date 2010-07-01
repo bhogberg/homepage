@@ -34,4 +34,3 @@ class entry(models.Model):
         return textile(self.fourth_column_text)  
     def render(self):
         return render_to_string('entries/{0}.html'.format(self.entryType), {'entry': self})     
-

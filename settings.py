@@ -55,6 +55,11 @@ LOGIN_REDIRECT_URL = '/'
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/media/admin/'
 
+TINYMCE_JS_URL = '/tiny_mce/tiny_mce.js'
+
+FEINCMS_ADMIN_MEDIA = '/feincms_media/'
+
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '52#1gvp9o5g+b-=7#^nk9y)r1ctqa0!l_0sbe^&6-0x351l&fj'
 
@@ -88,4 +93,11 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'photologue',
     'entries',
+    
+    'feincms',
+    'feincms.module.page',
+    'mptt',
+    'homepage', # Need to have this to get syncdb create necessary tables
+    
+    
 )
