@@ -3,8 +3,15 @@ This is a simple, django-powered website that I use to administer my lab homepag
 Dependencies: 
     Photologue (http://code.google.com/p/django-photologue)
     PyTextile (http://pypi.python.org/pypi/textile)
+    feinCMS (http://github.com/matthiask/feincms)
+    
     
 To use images, add these sizes to Photologue's image sizes: 
 'standard'  340px wide
 'medium'    220px wide
 'small'     100px wide
+
+For video embedding to work nicely in all browsers use something like this and not YouTube's default embedding code:
+<object type="application/x-shockwave-flash" data="VID_URL" width="425" height="344">
+    <param name="movie" value="VID_URL" />
+</object>

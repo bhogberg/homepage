@@ -633,3 +633,24 @@ body {
 	margin-left: 10px;
 	margin-right: 10px;
 }
+.content-video480left .video480 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 580px;
+}
+
+.content-video480left .video480 object{
+	margin-left: 100px;
+	}
+
+.content-video480left .content-text {
+	width:220px;
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}

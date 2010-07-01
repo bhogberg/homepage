@@ -9,12 +9,13 @@ class entry(models.Model):
         ('rightimage', 'Standard, image(s) to the right'),
         ('fourcolumn', 'Four colmuns of text only'),
         ('twocolSmallImgs', 'Two columns of text with small images'),
-        ('TxtImgTxtImg', 'Four columns A: text, images, text and then images.')
+        ('TxtImgTxtImg', 'Four columns A: text, images, text and then images.'),
+        ('video480pxLeft', 'Embedded object (video) 480px wide to the left then text.'),
     )
     entryType = models.CharField(max_length=25,choices=TYPE_CHOICES)
     title = models.CharField(max_length=250)
     first_column_text = models.TextField()
-    second_column_text = models.TextField(blank=True)
+    second_column_text = models.TextField(blank=True,help_text='Paste embedded object codes here, if any.')
     third_column_text = models.TextField(blank=True)
     fourth_column_text = models.TextField(blank=True)
     first_column_images = models.ManyToManyField(Photo, related_name='entry_first_column_images', blank=True)
