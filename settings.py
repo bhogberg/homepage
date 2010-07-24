@@ -93,6 +93,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'photologue',
     'entries',
+    'publications',
     
     'feincms',
     'feincms.module.page',

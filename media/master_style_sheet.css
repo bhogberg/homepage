@@ -64,9 +64,11 @@
 	width:100px;
 }
 
+
 .container_16 .grid_3 {
 	width:160px;
 }
+
 
 .container_16 .grid_4 {
 	width:220px;
@@ -76,9 +78,11 @@
 	width:280px;
 }
 
+
 .container_16 .grid_6 {
 	width:340px;
 }
+
 
 .container_16 .grid_7 {
 	width:400px;
@@ -647,6 +651,66 @@ body {
 	margin: 0;
 	float: right;
 	}
+.publication .publication-image {
+	display:inline;
+	float: left;
+	position: relative;
+	padding-top: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 100px;
+}
+
+.publication .description-box {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 580px;
+}
+
+.publication .description-box .title {
+	padding: 0px;
+	margin: 0px;
+	font-size: 1.1em;
+	font-weight: normal;
+	color:#09C;
+
+}
+
+.publication .description {
+	text-align: justify;
+}
+
+.publication .citation-box {
+	width:220px;
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 17px;
+}
+
+.publication .journal {
+	font-style: italic;
+	display: inline;
+}
+
+.publication .volume {
+	display: inline;
+	font-weight: bold;	
+}
+
+.publication .citation-box .pdf-link {
+	display: inline;
+}
+
+.publication .pdf-link:hover{
+	color: #000;
+	background-color:#0FF;
+}
 
 .content-video480left .content-text {
 	width:220px;
@@ -655,4 +719,21 @@ body {
 	position: relative;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.container.container_16 #footer {
+	width: 940px;
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.60em;
+	line-height: 140%;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	border-top-style:solid;
+	border-color:#CCC;
 }

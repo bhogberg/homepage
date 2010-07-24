@@ -1,0 +1,21 @@
+<div class="publication">
+    <div class="publication-image">
+        <img src="{{ publication.publication_image.get_publication_thumb_url }}" />		
+    </div>
+    <div class="description-box">
+        <div class="title">{{ publication.title }}</div>
+        <div class="description">  
+            {{ publication.description }}
+        </div>
+    </div>
+    <div class="citation-box">
+        <div class="authors">{{ publication.authors }}</div>
+        <div class="journal">{{ publication.journal }}</div>
+        <div class="volume">{{ publication.volume }}</div>, p. {{ publication.pages }} ({{ publication.date_published.year }})
+        <br>
+        <div class="pdf-link"><a href="{{ publication.pdf_file.path }}">[.pdf]</a></div>
+    </div>	
+    <div class="clear">&nbsp;</div>
+</div>
+
+
