@@ -1,3 +1,4 @@
 *.pyc
 dev.db
 media/photologue/*
+media/publications/*
