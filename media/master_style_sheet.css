@@ -660,6 +660,11 @@ body {
 	margin-right: 10px;
 	width: 100px;
 }
+.container.container_16 #content .publication .citation-box .pdf-link a {
+	color: #000;
+	text-decoration: none;
+}
+
 
 .publication .description-box {
 	display:inline;
